@@ -1,0 +1,37 @@
+create table bikes (id integer primary key, name text, rating integer, stock integer, price integer );
+
+insert into bikes values (1, "vaz", 1, 1, 51 );
+
+insert into bikes values (2, "taq", 2, 2, 52 );
+
+insert into bikes values (3, "ump", 3, 3, 55 );
+
+insert into bikes values (4, "pimp", 4, 4, 59 );
+
+insert into bikes values (5, "brez", 5, 5, 98 );
+
+insert into bikes values (6, "dez", 5, 5, 57 );
+
+insert into bikes values (7, "bez", 5, 5, 46 );
+
+insert into bikes values (8, "sez", 5, 5, 78 );
+
+insert into bikes values (9, "chad", 5, 5, 58 );
+
+insert into bikes values (10, "tif", 5, 5, 34 );
+
+insert into bikes values (11, "sif", 5, 5, 98 );
+
+insert into bikes values (12, "nif", 5, 5, 14 );
+
+insert into bikes values (13, "lif", 5, 5, 58 );
+
+insert into bikes values (14, "pol", 5, 5, 50 );
+
+insert into bikes values (15, "jez", 5, 5, 58 );
+
+select * from bikes;
+
+select * from bikes where price order by price;
+
+select sum(stock) from bikes
