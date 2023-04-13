@@ -1,0 +1,36 @@
+CREATE TABLE Movie_Actors (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    Actors_Name TEXT,
+    Actors_Age INTEGER,
+    Actors_Hometown TEXT);
+    
+    INSERT INTO Movie_Actors (Actors_Name, Actors_Age, Actors_Hometown) VALUES ("Clint Eastwood","92", "Carmel, California");
+
+INSERT INTO Movie_Actors (Actors_Name, Actors_Age, Actors_Hometown) VALUES ("Robert De Niro", "79", "Manhattan, New York City");
+
+INSERT INTO Movie_Actors (Actors_Name, Actors_Age, Actors_Hometown) VALUES ("Tom Cruise", "60", "Syracuse, New York");
+
+CREATE TABLE Film_Info (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    Actors_Id INTEGER,
+    Film_Name TEXT,
+    Film_Year INTEGER,
+    Film_Profit TEXT);
+    
+    INSERT INTO Film_Info (Actors_Id, Film_Name, Film_Year, Film_Profit) VALUES ("1", "Gran Torino", "2008", "$274,543,085");
+    
+    INSERT INTO Film_Info (Actors_Id, Film_Name, Film_Year, Film_Profit) VALUES ("1", "Absolute Power", "1997", "$50,068,310");
+    
+    INSERT INTO Film_Info (Actors_Id, Film_Name, Film_Year, Film_Profit) VALUES ("2", "The Intern", "2015", "$197,115,710");
+    
+    INSERT INTO Film_Info (Actors_Id, Film_Name, Film_Year, Film_Profit) VALUES ("2", "The Godfather", "1974", "$93,000,000");
+    
+    INSERT INTO Film_Info (Actors_Id, Film_Name, Film_Year, Film_Profit) VALUES ("3", "The Last Samurai", "2003", "$456,000,000");
+
+    INSERT INTO Film_Info (Actors_Id, Film_Name, Film_Year, Film_Profit) VALUES ("3", "Top Gun", "1986", "$719,000,000");
+    
+    select Actors_Name, Film_Name, Film_Profit
+    from Movie_Actors
+    join Film_Info
+    where Movie_Actors.id = Film_Info.Actors_Id
+    order by Film_Profit desc;
